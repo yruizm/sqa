@@ -1,0 +1,12 @@
+RESERVAR PAQUETE
+Destino. Medellin
+FechaIda. 2022-11-25
+FechaRegreso. 2022-12-15
+Compra de Paquete, Hotel  encontrado o Diponible: Hotel San Fernando Plaza
+Compra de Tiquetes Alojamiento Precio: $15807042
+Compra de Tiquetes Precio: $15807042
+Datos del Pago
+Tarjeta Credito. 4599186591517657
+Titular. Tadeo Elias Ruiz Gonzalez
+Identificación Titular.1077442975
+El fichero de texto ya estaba creado.

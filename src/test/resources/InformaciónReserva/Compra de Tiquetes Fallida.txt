@@ -1,0 +1,9 @@
+RESERVAR VUELO
+Ida y Vuelta. SI
+Destino. Medellin
+FechaIda. 2022-11-29
+FechaRegreso. 2022-12-19
+Compra de Tiquetes Precio, encontrado: $470080 Superior al Presupuesto $50000
+Proceso Fallido
+
+El fichero de texto ya estaba creado.

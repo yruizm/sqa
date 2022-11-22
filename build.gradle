@@ -1,0 +1,89 @@
+group 'co.com.yrm.qa.proyecto'
+version '1.0'
+
+defaultTasks 'clean', 'test', 'aggregate'
+
+repositories {
+    jcenter()
+    mavenCentral()
+
+}
+
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:3.2.0"
+    }
+}
+
+
+
+apply plugin: 'idea'
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+
+
+ext{
+    serenityVersion = '2.0.90'
+    serenityCucumberVersion = '1.9.5'
+    slf4jVersion = '1.7.7'
+    serenityCoreVersion = '3.2.0'
+    junitVersion = '4.13.1'
+    assertJVersion = '3.22.0'
+    logVersion = "2.17.2"
+    lombok = "1.18.20"
+}
+
+dependencies {
+    implementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-cucumber:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}"
+
+    testImplementation "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
+            "junit:junit:${junitVersion}",
+            "org.assertj:assertj-core:${assertJVersion}"
+    implementation(group: 'org.apache.logging.log4j', name: 'log4j-core', version: "$rootProject.ext.logVersion")
+    implementation(group: 'org.apache.logging.log4j', name: 'log4j-api', version: "$rootProject.ext.logVersion")
+
+    implementation(group: 'org.projectlombok', name: 'lombok', version: "$rootProject.ext.lombok")
+    annotationProcessor(group: 'org.projectlombok', name: 'lombok', version: "$rootProject.ext.lombok")
+    testCompileOnly(group: 'org.projectlombok', name: 'lombok', version: "$rootProject.ext.lombok")
+    testAnnotationProcessor(group: 'org.projectlombok', name: 'lombok', version: "$rootProject.ext.lombok")
+
+}
+
+
+
+
+
+
+test {
+
+    //Sigue ejecutando aunque falle un caso
+    gradle.startParameter.continueOnFailure = true
+
+    testLogging.showStandardStreams = true
+    systemProperties System.getProperties()
+    //Habilitar Ejecuciones Paralelas
+    //maxParallelForks = Runtime.runtime.availableProcessors()
+
+}
+
+tasks.withType (JavaCompile) {
+    compileJava.options.encoding = 'UTF-8'
+    compileTestJava.options.encoding = 'UTF-8'
+}
+
+test.finalizedBy(aggregate)

@@ -1,0 +1,8 @@
+RESERVAR ALOJAMIENTO
+Destino. Medellin
+FechaIda. 2022-11-25
+FechaRegreso. 2022-12-9
+Reserva de Alojamiento Precio, encontrado: $1270520 Superior al Presupuesto $50000
+Proceso Fallido
+
+El fichero de texto ya estaba creado.
