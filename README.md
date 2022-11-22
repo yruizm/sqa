@@ -52,3 +52,13 @@ Para ejecutar la automatización se abre la consola en la raíz del proyecto, y 
 
 ## Autor ##
 Yefri Ruiz Mosquera
+
+## Autor ##
+No cuento con computador personal y en la maquina no tengo excel (todo es en Nube) y tampoco firefox, por lo tanto no pude probarlo.
+
+La carga de datos al example lo he usado con excel.
+<img width="660" alt="image" src="https://user-images.githubusercontent.com/80863171/203208645-71faaa8e-8aa4-45a4-856b-13e46197512d.png">
+Apuntando a Archivo y Hoja
+<img width="608" alt="image" src="https://user-images.githubusercontent.com/80863171/203208811-0cfa77e9-e177-413b-9b41-cd64a558ce2a.png">
+
+
